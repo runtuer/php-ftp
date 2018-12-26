@@ -1,32 +1,23 @@
 {
-  "name": "runtuer/php-ftp",
-  "type": "library",
-  "description": "A flexible FTP and SSL-FTP client for PHP. This lib provides use native PHP API and fsockopen.",
-  "license": "MIT",
-  "keywords": [
-    "ftp",
-    "sftp",
-    "ssl-ftp",
-    "ssl",
-    "file",
-    "server",
-    "lib",
-    "helper"
-  ],
-  "homepage": "https://github.com/runtuer/php-ftp",
-  "authors": [
-    {
-      "name": "Runtuer",
-      "email": "dev@runtuer.com",
-      "homepage": "http://www.runtuer.com"
+    "name": "runtuer/php-ftp",
+    "type": "library",
+    "description": "A flexible FTP and SSL-FTP client for PHP. This lib provides use native PHP API and fsockopen.",
+    "license": "MIT",
+    "keywords": ["ftp", "sftp", "ssl-ftp", "ssl", "file", "server", "lib", "helper"],
+    "homepage": "https://github.com/runtuer/php-ftp",
+    "authors": [
+        {
+          "name": "Runtuer",
+          "email": "dev@runtuer.com",
+          "homepage": "http://www.runtuer.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ftp\\Ftpclient\\": "src"
+        }
     }
-  ],
-  "require": {
-    "php": ">=7"
-  },
-  "autoload": {
-    "psr-4": {
-      "Ftpclient": "src/Ftpclient"
-    }
-  }
 }
