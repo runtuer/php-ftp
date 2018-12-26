@@ -49,9 +49,9 @@ $ftp->putAll($source_directory, $target_directory, FTP_BINARY);
 $ftp->putAll($source_directory, $target_directory, FTP_ASCII);
 ```
 
-*Note : 以下方法不正确，等待修改.*
+*Note : .*
 
-Get a directory size :
+$ftp = new \Ftp\Ftpclient();
 
 ```php
 // size of the current directory
