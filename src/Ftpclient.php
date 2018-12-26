@@ -159,7 +159,7 @@ class Ftpclient
         if ($this->ftp_extension) {
             try {
                 $ret = ftp_nb_put($this->conn, $params['remote'], $params['local'], $this->mode, $params['resume']);
-                while ($ret == FTP_MOREDATA) {
+                while ($ret == 2) {
                     $ret = ftp_nb_continue($this->conn);
                 }
             } catch (\Exception $e) {
@@ -169,7 +169,7 @@ class Ftpclient
             $ret = $this->ftpclient->upload($params['local'], $params['remote'], $this->mode, $params['resume']);
         }
 
-        if ($ret == FTP_FAILED || !$ret) {
+        if ($ret == 0 || !$ret) {
             throw new \Exception('Ftp upload fail error contents : ' . var_export($ret, 1));
         }
 
@@ -187,14 +187,14 @@ class Ftpclient
     {
         if ($this->ftp_extension) {
             $ret = ftp_nb_get($this->conn, $params['local'], $params['remote'], $this->mode, $params['resume']);
-            while ($ret == FTP_MOREDATA) {
+            while ($ret == 2) {
                 $ret = ftp_nb_continue($this->conn);
             }
         } else {
             $ret = $this->ftpclient->download($params['remote'], $params['local'], $this->mode, $params['resume']);
         }
 
-        if ($ret == FTP_FAILED || $ret === false) {
+        if ($ret == 0 || $ret === false) {
             throw new \Exception('Ftp download fail !');
         }
 
