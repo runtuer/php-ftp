@@ -79,7 +79,7 @@ class Ftpclient
      */
     private function _login($params)
     {
-        if (!$params['name'] || !$params['pass']) {
+        if (!$params['username'] || !$params['password']) {
             throw new \Exception('Ftp login fail, ftp username or password is empty !');
         }
 

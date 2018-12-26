@@ -4,7 +4,7 @@
     "description": "A flexible FTP and SSL-FTP client for PHP. This lib provides use native PHP API and fsockopen.",
     "license": "MIT",
     "keywords": ["ftp", "sftp", "ssl-ftp", "ssl", "file", "server", "lib", "helper"],
-    "homepage": "https://github.com/runtuer/php-ftp",
+    "homepage": "http://www.runtuer.com",
     "authors": [
         {
           "name": "Runtuer",
