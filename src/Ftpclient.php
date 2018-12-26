@@ -21,7 +21,7 @@ class Ftpclient
     public $ftp_extension = true; //FTP扩展
     public $ftpclient     = null; //FTP链接器
     public $conn          = null; //连接器对象
-    public $mode          = FTP_BINARY; //连接模式
+    public $mode          = 2;    //连接模式 FTP_BINARY
 
     /**
      * @Mark:构造器
